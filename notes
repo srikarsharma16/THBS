@@ -1,1 +1,8 @@
 https://github.com/thymeleaf/thymeleaf/issues/581
+
+                                <div class="form-group">
+                                <label class="col-md-4 control-label" for="singlebutton"></label>
+                                <div class="col-md-4">
+                                  <input type="submit" id="singlebutton" value="UPDATE PROFILE" class="btn btn-primary">
+                                </div>
+                                </div>
