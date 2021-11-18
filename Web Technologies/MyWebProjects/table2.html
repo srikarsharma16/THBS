@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INDEX</title>
+        <style>
+            table td{
+            border:1px solid grey;
+            padding:10px;
+            }
+
+            .active{
+            border:1px solid red;
+            }
+
+            button{
+            margin-right:10px;
+            }
+        </style>
+        <script>
+            var dat = document.getElementsByTagName('td');
+            var numOfColumns = document.getElementsByTagName('tr').length;
+            var numOfRows = document.getElementsByTagName('tr').length;
+            var currIndex = 0;
+            var rowObj = document.getElementsByTagName('tr');
+            var oneColLength = rowObj[0].children.length;
+            var colObj = document.getElementsByTagName('td');
+            var totalData = rowObj.length * colObj.length;
+            var dataCounter = 0;
+            var matrixObj = new Array(rowObj.length);
+            var currentX = 0;
+            var currentY = 0;
+            var buttons = document.getElementsByTagName('button');
+
+            console.log(buttons);
+
+
+            for(var i = 0; i < matrixObj.length; i++){
+                matrixObj[i] = new Array(oneColLength);
+            }
+
+            for(var i = 0; i < numOfRows; i++){
+                 for(var j = 0; j < oneColLength; j++){
+                        matrixObj[i][j] = colObj[dataCounter++];
+                }
+            }
+
+            for(var i = 0; i < buttons.length; i++){
+                     buttons[i].addEventListener("click",function(){
+                            removeAllBorders();
+                            compareBtnEntity(this);
+                     });
+            }
+
+            for(var i = 0; i < dat.length; i++){
+            dat[i].addEventListener("click",function(){
+                removeAllBorders();
+                this.style.border = "1px solid red";
+                compareEntity(this);
+            });
+            }
+
+            window.addEventListener("keyup",function(e){
+                switch(e.keyCode){
+                        case 37: 
+                            if(currentX > 0){
+                            currentX--;
+                            repaint();
+                            }
+                            break;
+                        case 38: 
+                            if(currentY > 0){
+                            currentY--;
+                            repaint();
+                            }
+                            break;
+                        case 39: 
+                            if(currentX < oneColLength-1){
+                            currentX++;
+                            repaint();
+                            }
+                            break;
+                        case 40: 
+                            if(currentY < matrixObj.length-1){
+                            currentY++;
+                            repaint();
+                            }
+                            break;          
+                    }
+            })
+
+            function removeAllBorders(){
+            for(var i = 0; i < dat.length; i++){
+                dat[i].style.border = "1px solid grey";
+            }
+            }
+
+            function compareEntity(ele){
+            for(var i = 0; i < matrixObj.length; i++){
+                for(var j = 0; j < oneColLength; j++){
+                if(ele == matrixObj[i][j]){
+                    currentX = j;
+                    currentY = i;
+                }
+                }
+            }
+            }
+
+            function compareBtnEntity(ele){
+                    for(var i = 0; i < buttons.length; i++){
+                        if(buttons[i] == ele){
+                            break; 
+                        }
+                    }
+
+                switch(i){
+                            case 0: 
+                            if(currentX > 0){
+                            currentX--;
+                            repaint();
+                            }
+                            break;
+                        case 1: 
+                            if(currentY > 0){
+                            currentY--;
+                            repaint();
+                            }
+                            break;
+                        case 2: 
+                            if(currentX < oneColLength-1){
+                            currentX++;
+                            repaint();
+                            }
+                            break;
+                        case 3: 
+                            if(currentY < matrixObj.length-1){
+                            currentY++;
+                            repaint();
+                            }
+                            break;       
+                }
+                repaint();
+            }
+
+
+            function repaint(){
+            removeAllBorders();
+            matrixObj[currentY][currentX].style.border = "3px solid red";
+            }
+        </script>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+            </tr>
+            <tr>
+              <td>1,1</td>
+              <td>1,2</td>
+              <td>1,3</td>
+              <td>1,4</td>
+            </tr>
+            <tr>
+              <td>2,1</td>
+              <td>2,2</td>
+              <td>2,3</td>
+              <td>2,4</td>
+            </tr>
+            <tr>
+              <td>3,1</td>
+              <td>3,2</td>
+              <td>3,3</td>
+              <td>3,4</td>
+            </tr>
+            </table>
+            
+            <button>Left</button>
+            <button>Up</button>
+            <button>Right</button>
+            <button>Down</button>
+
+    </body>
+</html>

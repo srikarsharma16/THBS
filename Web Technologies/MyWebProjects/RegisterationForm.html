@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM</title>
+    </head>
+    <body>
+    <h1>Registration Form</h1>
+    <h2>Provide your Details</h2>
+    <form method="get" action="RegisterationForm.html">
+        Name:  FirstName<input type="text" placeholder="FirstName" id="firstName" required> MiddleName <input type="text" placeholder="MiddleName" id="middleName" required>
+        LastName<input type="text" placeholder="LastName" id="lastName" required> <br> <br>
+
+        Email: <input type="email" placeholder="Email" id="emailid" required> <br> <br>
+        Phone Number: <input type="number" id="phoneNumber" placeholder="Enter your Number" required> <br> <br>
+        Password: <input type="password" id="password" placeholder="Enter the Password" required> <br> <br>
+        DOB: <input type="date" id="dateofbirth" required> <br> <br>
+        GENDER: Male<input type="radio" value="Male" checked="true" name="gender" id="gender" required>
+        Female <input type="radio" value="Female" name="gender" id="gender" required> <br>
+        
+        Address <textarea rows="10" cols="30" id="address" placeholder="Enter your House Number/Street Name/City/State/PinCode" required></textarea>    <br> <br>
+
+        Select CITY: 
+        <select>
+            <option value="Bangalore" id="city">Bangalore</option>
+            <option value="Mumbai" id="city">Mumbai</option>
+            <option value="Chennai" id="city">Chennai</option>
+
+        </select>
+        Select STATE: 
+        <select>
+            <option value="Karnataka" id="state">Karnataka</option>
+            <option value="Maharastra" id="state">Maharastra</option>
+            <option value="Tamil Nadu" id="state">Tamil Nadu</option>
+
+        </select> <br> <br>
+
+        Submit: <input type="submit" value="Submit" id="submit">
+        Reset: <input type="reset" value="Reset" id="reset">
+
+    </form>
+</body>
+</html>
