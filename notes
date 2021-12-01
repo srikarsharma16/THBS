@@ -1,4 +1,5 @@
-            <dependency>
+           spring.data.mongodb.uri=+srv://root:Root@123@cluster0.olwvc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+           <dependency>
                 <groupId>it.ozimov</groupId>
                 <artifactId>spring-boot-email-core</artifactId>
                 <version>0.6.3</version>
