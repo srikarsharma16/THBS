@@ -1,4 +1,6 @@
-           mongodb+srv://root:<password>@cluster0.olwvc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+https://maps.app.goo.gl/ZYyJVDPRyRSunWdRA          
+          
+          mongodb+srv://root:<password>@cluster0.olwvc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
            spring.data.mongodb.uri=+srv://root:Root@123@cluster0.olwvc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
            <dependency>
                 <groupId>it.ozimov</groupId>
