@@ -268,3 +268,7 @@ var arr2 = arr.filter((ob)=>((obj)=>
     return per
 })(ob)>num)
 console.log(arr2)
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+https://drive.google.com/drive/folders/1jDMHxZFBmM0SIN8b9pzI67peuCkIUJ71?usp=sharing
