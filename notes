@@ -1,3 +1,14 @@
+fetch("https://todearhemant.pythonanywhere.com/patient/api/patients/")
+    .then(response=>response.json())
+    .then(data=>{
+        //console.log(data)
+        this.setState({patients:data})
+    })
+    .catch(err=>{
+      alert("Something Wrong !")
+    })
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
 class App extends React.Component
 {
