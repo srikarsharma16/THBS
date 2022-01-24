@@ -120,6 +120,8 @@ class Profile extends React.Component
                     <span class="visually-hidden">My orders</span>
                   </span>
                 </Link><i class="fe-icon-user text-muted"></i>My Orders</a>
+                <a class="list-group-item" ><Link class="list-group-item" to='/mybids' className='nav-links'>
+                    </Link><i class="fe-icon-user text-muted"></i>My Bids</a>
                 </nav>
             </div>
         </div>
